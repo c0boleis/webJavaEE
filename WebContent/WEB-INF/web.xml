@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>WebMvc</display-name>
+	<servlet>
+		<servlet-name>personne</servlet-name>
+		<servlet-class>com.test.ServletPersonne</servlet-class>
+		<init-param>
+			<param-name>urlReponse</param-name>
+			<param-value>/WEB-INF/vues/reponse.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlErreurs</param-name>
+			<param-value>/WEB-INF/vues/erreurs.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlFormulaire</param-name>
+			<param-value>/WEB-INF/vues/formulaire.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlControleur</param-name>
+			<param-value>main</param-value>
+		</init-param>
+		<init-param>
+			<param-name>lienRetourFormulaire</param-name>
+			<param-value>Retour au formulaire</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>personne</servlet-name>
+		<url-pattern>/main</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
